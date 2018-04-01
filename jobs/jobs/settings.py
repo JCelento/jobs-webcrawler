@@ -14,12 +14,14 @@ BOT_NAME = 'jobs'
 SPIDER_MODULES = ['jobs.spiders']
 NEWSPIDER_MODULE = 'jobs.spiders'
 
+FEED_URI = 'result/%(name)s/%(time)s.json'
+FEED_FORMAT = 'json'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'jobs (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

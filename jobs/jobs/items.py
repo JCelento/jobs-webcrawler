@@ -10,5 +10,9 @@ import scrapy
 
 class JobsItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    jobTitle = scrapy.Field()
+    company = scrapy.Field()
+    location = scrapy.Field()
+    jobSummary = scrapy.Field()
+    url = scrapy.Field()
     pass
