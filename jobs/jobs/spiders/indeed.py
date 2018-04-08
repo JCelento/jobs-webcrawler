@@ -37,4 +37,5 @@ class IndeedSpider(CrawlSpider):
         item['location'] = location
         item['jobSummary'] = jobSummary
         item['url'] = response.url
+        item['salary'] = 'undefined'
         yield item
