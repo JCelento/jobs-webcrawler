@@ -20,6 +20,12 @@ FEED_FORMAT = 'json'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'jobs (+http://www.yourdomain.com)'
 
+ITEM_PIPELINES = {
+    'jobs.pipelines.JobsPipeline': 300,
+}
+MONGO_URI = 'mongodb://localhost:27017'
+MONGO_DATABASE = 'jobs-collection'
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
@@ -29,7 +35,9 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = .25
+RANDOMIZE_DOWNLOAD_DELAY = True
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
